@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Travelco</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #453953;
+            color: #453953;
+        }
+        
+        .navbar {
+            background-color: #975a5e;
+            color: beige;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin-right: 20px;
+        }
+        
+        .nav-links li a {
+            text-decoration: none;
+            color: beige;
+        }
+        
+        .burger {
+            display: none;
+            color: beige;
+            cursor: pointer;
+        }
+        
+        .main {
+            padding: 20px;
+        }
+        
+        .section {
+            padding: 50px 20px;
+            background-color: beige;
+            border-bottom: 1px solid #975a5e;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        .destination {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .destination img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .book-now {
+            background-color: #975a5e;
+            color: beige;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-now:hover {
+            background-color: #954f2b;
+        }
+
+        footer {
+            background-color: #975a5e;
+            color: beige;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .burger {
+                display: block;
+            }
+            
+            .nav-active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: #453953;
+                padding: 10px 0;
+                z-index: 1;
+            }
+            
+            .nav-active li {
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Travelco</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+            <div class="burger">&#9776;</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Popular Destinations</h2>
+            <div class="destination">
+                <img src="https://source.unsplash.com/1200x400/?beaches,travel" alt="Destination 1">
+                <h3>Beach Paradise</h3>
+                <p>Relax on pristine beaches and enjoy crystal-clear waters.</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <div class="destination">
+                <img src="https://source.unsplash.com/1200x400/?mountains,trekking" alt="Destination 2">
+                <h3>Mountain Retreat</h3>
+                <p>Embark on thrilling hikes and soak in breathtaking mountain views.</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <div class="destination">
+                <img src="https://source.unsplash.com/1200x400/?cultural,travel" alt="Destination 3">
+                <h3>Cultural Expedition</h3>
+                <p>Immerse yourself in rich history and vibrant cultures.</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <div class="destination">
+                <img src="https://source.unsplash.com/1200x400/?spain,nature" alt="Destination 4">
+                <h3>Cultural Expedition</h3>
+                <p>Immerse yourself in rich history and vibrant cultures.</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <div class="destination">
+                <img src="https://source.unsplash.com/1200x400/?spain,nature" alt="Destination 3">
+                <h3>Cultural Expedition</h3>
+                <p>Immerse yourself in rich history and vibrant cultures.</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <!-- Add more destinations as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Travelco. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+        });
+    </script>
+</body>
+</html>

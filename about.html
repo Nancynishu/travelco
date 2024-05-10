@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Travelco</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: beige;
+            color: #453953;
+        }
+        
+        .navbar {
+            background-color: #975a5e;
+            color: beige;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin-right: 20px;
+        }
+        
+        .nav-links li a {
+            text-decoration: none;
+            color: beige;
+        }
+        
+        .burger {
+            display: none;
+            color: beige;
+            cursor: pointer;
+        }
+        
+        .main {
+            padding: 20px;
+        }
+        
+        .section {
+            padding: 50px 20px;
+            background-color: beige;
+            border-bottom: 1px solid #975a5e;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            margin-bottom: 20px;
+        }
+
+        .section ul {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #975a5e;
+            color: beige;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 300px; /* Set width of image */
+            height: 300px; /* Set height of image */
+            border-radius: 50%; /* Ensure image is round */
+            margin-bottom: 10px; /* Add some space below image */
+        }
+        
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .burger {
+                display: block;
+            }
+            
+            .nav-active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: #453953;
+                padding: 10px 0;
+                z-index: 1;
+            }
+            
+            .nav-active li {
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Travelco</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+            <div class="burger">&#9776;</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>About Us</h2>
+            <p>Travelco is a leading travel company dedicated to providing exceptional travel experiences to adventurers, explorers, and leisure travelers alike. With our passion for travel and commitment to customer satisfaction, we strive to create unforgettable journeys that exceed expectations.</p>
+            <p>Founded in 20XX, Travelco has quickly become synonymous with quality, reliability, and innovation in the travel industry. Our team of experienced professionals is dedicated to curating unique itineraries, ensuring seamless logistics, and delivering unparalleled service at every step of your journey.</p>
+            <p>At Travelco, we believe that travel has the power to enrich lives, broaden horizons, and create lasting memories. Whether you're embarking on a solo adventure, planning a romantic getaway, or organizing a group tour, we're here to turn your travel dreams into reality.</p>
+            <hr>
+            <h3>Our Mission</h3>
+            <p>Our mission at Travelco is to inspire and empower people to explore the world, connect with diverse cultures, and foster meaningful experiences that enrich their lives. We are committed to delivering exceptional service, promoting sustainable travel practices, and creating positive impacts in the communities we visit.</p>
+            <hr>
+            <h3>Why Choose Travelco?</h3>
+            <ul>
+                <li>Expertise: Our team consists of experienced professionals with in-depth knowledge of global destinations and travel trends.</li>
+                <li>Personalized Service: We tailor each itinerary to your preferences, ensuring a personalized and memorable travel experience.</li>
+                <li>Value: We offer competitive prices without compromising on quality, providing excellent value for your money.</li>
+                <li>Customer Satisfaction: Your satisfaction is our top priority. We go above and beyond to exceed your expectations and ensure a seamless travel experience.</li>
+                <li>Sustainability: We are committed to promoting sustainable travel practices and minimizing our environmental footprint.</li>
+            </ul>
+            <hr style="color: brown;">
+            <h3 style="text-align: center;">Our Team</h3>
+            <p style="text-align: center;">Meet the passionate individuals behind Travelco:</p>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="team_member1.jpg" alt="Team Member 1">
+                    <h4>John Doe</h4>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="team_member2.jpg" alt="Team Member 2">
+                    <h4>Jane Smith</h4>
+                    <p>Head of Operations</p>
+                </div>
+                <div class="team-member">
+                    <img src="team_member3.jpg" alt="Team Member 3">
+                    <h4>John Smith</h4>
+                    <p>Marketing Manager</p>
+                </div>
+                <div class="team-member">
+                    <img src="team_member4.jpg" alt="Team Member 4">
+                    <h4>Mary Johnson</h4>
+                    <p>Customer Support Specialist</p>
+                </div>
+                <!-- Add more team members as needed -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Travelco. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+        });
+    </script>
+</body>
+</html>
